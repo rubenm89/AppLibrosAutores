@@ -1,30 +1,27 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <header>
+      <nav>        
+        <router-link to="/books">Libros</router-link>
+        <router-link to="/">Inicio</router-link>        
+        <router-link to="/authors">Autores</router-link>
+      </nav>
+    </header>
+    <main>
+      <h1>  App de Libros y Autores</h1>
+      <router-view />      
+    </main>
+    <footer>
+      <p>Laboratorio 3 - Cursado Intensivo - 2024</p>
+    </footer>
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-nav {
-  padding: 30px;
-}
+import './assets/style.css';
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+export default {
+  name: 'App',
+};
+</script>
